@@ -1,0 +1,89 @@
+// index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Child Notes Website</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <!-- Warning Banner -->
+  <div class="warning-banner">WARNING: DON'T REFRESH THIS PAGE — IF YOU REFRESH, YOUR DATA WILL BE DELETED</div>
+
+  <!-- Header -->
+  <header>
+    <h1>NOTES STORAGE</h1>
+    <nav>
+      <button id="loginBtn">Login</button>
+      <button id="signupBtn">Signup</button>
+      <button id="logoutBtn" style="display:none;">Logout</button>
+    </nav>
+  </header>
+
+  <!-- Login Form -->
+  <section id="loginSection" class="auth-section">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input type="text" id="loginUsername" placeholder="Username" required>
+      <input type="password" id="loginPassword" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+  </section>
+
+  <!-- Signup Form -->
+  <section id="signupSection" class="auth-section" style="display:none;">
+    <h2>Signup</h2>
+    <form id="signupForm">
+      <input type="text" id="signupUsername" placeholder="Username" required>
+      <input type="password" id="signupPassword" placeholder="Password" required>
+      <button type="submit">Signup</button>
+    </form>
+  </section>
+
+  <!-- Dashboard -->
+  <section id="dashboard" style="display:none;">
+    <h2>Dashboard</h2>
+    <div class="stats">
+      <p>Total Pages Used: <span id="pagesUsed">0</span></p>
+      <p>Remaining Pages: <span id="pagesRemaining">20</span></p>
+    </div>
+
+    <!-- Add Note -->
+    <div class="add-note">
+      <h3>Add a New Note</h3>
+      <form id="noteForm">
+        <input type="text" id="noteName" placeholder="Note Name" required>
+        <input type="url" id="noteLink" placeholder="Note Link (URL)" required>
+        <button type="submit">Save Note</button>
+      </form>
+    </div>
+
+    <!-- Search Notes -->
+    <div class="search-notes">
+      <h3>Search Notes</h3>
+      <input type="text" id="searchInput" placeholder="Search by name...">
+    </div>
+
+    <!-- Notes List -->
+    <div class="notes-list">
+      <h3>Saved Notes</h3>
+      <ul id="notesContainer"></ul>
+    </div>
+
+    <!-- Payment Section -->
+    <div id="paymentSection" style="display:none;">
+      <h3>Subscribe to Earn Pages</h3>
+      <p>You have used all 20 free pages. Subscribe to <strong>XARIVO FF</strong> on YouTube to unlock 100 more pages.</p>
+      <div class="upi-payment">
+        <div style="font-size: 40px; margin-bottom: 10px;">📺🔴🔔</div>
+        <button id="simulateGameWinBtn">Subscribe & Get 100 Pages</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
